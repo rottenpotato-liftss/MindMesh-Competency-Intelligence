@@ -1,0 +1,28 @@
+kind = "web"
+previewPath = "/"
+title = "MindMesh"
+description = "An AI-driven competency intelligence and gamified learning platform for India's official statistical workforce, with personalized learning, Skill Garden growth, Skill DNA, and shield achievements."
+version = "1.0.0"
+id = "artifacts/mindmesh"
+router = "path"
+
+[[services]]
+name = "web"
+paths = [ "/" ]
+localPort = 23691
+
+[services.development]
+run = "pnpm --filter @workspace/mindmesh run dev"
+
+[services.production]
+build = [ "pnpm", "--filter", "@workspace/mindmesh", "run", "build" ]
+serve = "static"
+publicDir = "artifacts/mindmesh/dist/public"
+
+[[services.production.rewrites]]
+from = "/*"
+to = "/index.html"
+
+[services.env]
+PORT = "23691"
+BASE_PATH = "/"

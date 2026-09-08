@@ -1,0 +1,853 @@
+Build a complete, polished, hackathon-ready web prototype called **MindMesh**.
+
+### 1. PROJECT PURPOSE
+
+MindMesh is an AI-enabled learning and competency platform for India's Official Statistical System.
+
+Problem: Statistical officials need continuous upskilling in statistics, technology, digital governance and managerial skills. Existing learning platforms provide courses but do not intelligently identify competency gaps or personalize learning based on an employee's role, experience, previous training and future requirements.
+
+MindMesh turns learning into a continuous, intelligent and engaging experience through AI, competency intelligence and gamification.
+
+### 2. CORE SOLUTION
+
+Create this continuous AI learning loop:
+
+**PROFILE → ASSESS → ANALYZE → IDENTIFY SKILL GAPS → PERSONALIZE → RECOMMEND → LEARN → GENERATE QUIZ → ASSESS → AI FEEDBACK → UPDATE COMPETENCY → GROW SKILL GARDEN → UPDATE SKILL DNA → EARN SHIELDS → RECOMMEND AGAIN**
+
+The prototype must demonstrate:
+
+1. AI competency assessment
+2. Automated skill-gap analysis
+3. Personalized learning pathways
+4. iGOT Karmayogi course recommendations/integration demo
+5. NSSTA/TPAC training-program recommendations
+6. AI-generated MCQs/quizzes from uploaded learning materials
+7. AI feedback and competency updates
+8. Learner and admin dashboards
+9. **Skill Garden — visual growth based on learning activity**
+10. **Skill DNA — dynamic visual representation of the learner's skills**
+11. **Shield-based achievements inspired by competitive gaming progression**
+
+### 3. COMPETENCY FRAMEWORK
+
+**Statistical**
+
+* Survey Design
+* Sampling
+* National Accounts
+* Price Statistics
+* Labour Statistics
+* Agricultural Statistics
+* Industrial Statistics
+* SDG Indicators
+* Metadata Standards
+* Data Quality Frameworks
+
+**Technical**
+
+* Python, R, SQL, Stata, SPSS, SAS
+* GIS
+* Data Visualization
+* AI/ML
+* Cloud Computing
+* APIs
+* Open Data
+
+**Digital Governance**
+
+* Cybersecurity
+* Data Privacy
+* Digital Signatures
+* Government Cloud
+* Digital Public Infrastructure
+
+**Behavioural/Managerial**
+
+* Leadership
+* Communication
+* Project Management
+* Ethics
+* Decision Making
+* Change Management
+
+### 4. AI COMPETENCY TWIN
+
+Create a visual **AI Competency Twin** for every learner.
+
+Display:
+
+* Overall competency score
+* Domain scores
+* Individual skill scores
+* Strong skills
+* Skill gaps
+* Priority level
+* Recommended next skills
+* Progress over time
+
+Use a radar/bar chart and attractive competency cards.
+
+### 5. SKILL GARDEN 🌱
+
+Create a major gamified feature called **Skill Garden**.
+
+The Skill Garden visually represents the user's learning journey as a growing digital garden.
+
+Every skill becomes a plant/tree/flower or garden element.
+
+Examples:
+
+* Python → Python Tree
+* SQL → Database Plant
+* AI/ML → AI Flower
+* Statistics → Statistics Tree
+* Leadership → Leadership Plant
+* Data Visualization → Visualization Flower
+
+Growth must be proportional to actual learning activity.
+
+Factors affecting garden growth:
+
+* Course completion
+* Lessons completed
+* Time spent learning
+* Quiz attempts
+* Quiz scores
+* New skills acquired
+* Assessment improvement
+* Learning streak
+* Returning to the platform
+
+Example:
+**Low activity → seed/small plant**
+**Moderate activity → growing plant**
+**High activity → mature plant**
+**Mastery → large flowering/mature tree**
+
+The garden should visibly change as the user's competency improves.
+
+Show:
+
+* Total learning time
+* Garden growth %
+* Plants unlocked
+* Skills cultivated
+* Current learning streak
+* Recently grown skill
+
+Add subtle animations such as:
+
+* Seed growing
+* Leaves appearing
+* Flowers blooming
+* Trees becoming larger
+* Garden becoming more vibrant
+
+Do NOT make this a childish cartoon. Make it **premium, futuristic, professional and visually impressive**, suitable for a government AI platform.
+
+Allow users to click a plant and see:
+
+* Skill name
+* Current competency
+* Learning time
+* Progress
+* Courses completed
+* Last activity
+* Target competency
+
+### 6. SKILL DNA 🧬
+
+Create a major feature called **Skill DNA**.
+
+Skill DNA is a fun visual representation of the user's unique combination of knowledge and competencies.
+
+Create a futuristic animated **DNA helix / skill genome visualization**.
+
+The DNA should contain skill segments representing:
+
+* Technical skills
+* Statistical skills
+* Digital skills
+* Managerial skills
+* Behavioural skills
+
+Each skill should have:
+
+* Skill name
+* Competency %
+* Category
+* Level
+* Learning history
+
+The DNA continuously evolves.
+
+When a user learns a new skill:
+**New skill → DNA segment appears → DNA becomes richer**
+
+When competency improves:
+**Existing DNA segment grows/brightens/thickens**
+
+Display examples:
+
+* Python — 72%
+* SQL — 61%
+* Survey Design — 84%
+* AI/ML — 45%
+* Leadership — 78%
+
+Include:
+
+* Animated rotating DNA
+* Skill labels
+* Category indicators
+* Competency percentages
+* Hover/click details
+* “Recently Added” skills
+* “Fastest Growing Skill”
+* “Strongest Gene”
+* “Skill Diversity Score”
+
+Create a **Skill DNA Profile** that feels unique to each user.
+
+### 7. SHIELD ACHIEVEMENT SYSTEM 🛡️
+
+Replace the basic achievement display with a visually impressive **Shield Achievement System**.
+
+Use competitive-game-inspired metal shield progression.
+
+Do NOT copy BGMI logos, copyrighted assets or exact proprietary artwork. Instead, create an original shield design clearly inspired by the visual language of premium competitive games.
+
+Shield tiers:
+
+**Bronze**
+
+* Bronze Shield I
+* Bronze Shield II
+* Bronze Shield III
+
+**Silver**
+
+* Silver Shield I
+* Silver Shield II
+* Silver Shield III
+
+**Gold**
+
+* Gold Shield I
+* Gold Shield II
+* Gold Shield III
+
+**Platinum**
+
+* Platinum Shield I
+* Platinum Shield II
+* Platinum Shield III
+
+**Diamond**
+
+* Diamond Shield I
+* Diamond Shield II
+* Diamond Shield III
+
+**Master**
+
+* Master Shield
+
+**Grandmaster**
+
+* Grandmaster Shield
+
+Each achievement must have an actual visual shield image/icon representing the metal tier.
+
+Shield progression should depend on:
+
+* Learning hours
+* Courses completed
+* Quiz performance
+* Skill improvements
+* Learning streak
+* Skills mastered
+* Assessment improvement
+
+Example:
+**Bronze I — 1 completed course**
+**Bronze II — 3 courses**
+**Silver I — 10 learning hours**
+**Silver II — 20 learning hours**
+etc.
+
+Display:
+
+* Large current shield
+* Shield level
+* Progress to next shield
+* Requirements
+* Locked/unlocked shields
+* Achievement history
+
+Add a satisfying unlock animation when a new shield is earned.
+
+### 8. TECHNOLOGY
+
+Frontend:
+
+* React + Vite
+* Tailwind CSS
+* Responsive design
+* Modern component architecture
+* Recharts/Chart.js or equivalent visualization library
+* Framer Motion or equivalent for controlled animations
+
+Backend:
+
+* Java + Spring Boot
+* REST APIs
+* MySQL
+* JWT-ready authentication
+
+AI:
+
+* Gemini API through a dedicated backend AI service
+* If API key is unavailable, provide a realistic mock AI service so the entire prototype still works.
+
+Integration:
+
+* Create mock iGOT Karmayogi API/service
+* Create mock NSSTA/TPAC service
+* Clearly label simulated integration where real API access is unavailable.
+
+### 9. UNIQUE VISUAL THEME
+
+Do NOT use a generic blue corporate dashboard.
+
+Create a distinctive **“Neural Garden / Digital Intelligence”** visual identity.
+
+Theme direction:
+
+* Deep midnight / near-black background
+* Electric violet
+* Aurora teal
+* Emerald green
+* Subtle cyan highlights
+* Metallic bronze/silver/gold for achievement shields
+* Soft glowing gradients
+* Glassmorphism used selectively
+* Fine grid/neural-network patterns
+* Organic garden elements combined with futuristic AI visuals
+
+The interface should feel like:
+**AI + Nature + Human Intelligence + Gaming Progression**
+
+Use strong typography, excellent spacing, subtle glow effects and polished micro-interactions.
+
+Keep it professional enough for government/enterprise use.
+
+### 10. USER ROLES
+
+**Learner**
+
+* Profile
+* Competency assessment
+* AI competency analysis
+* Skill-gap dashboard
+* Personalized learning path
+* iGOT recommendations
+* NSSTA/TPAC recommendations
+* Course learning
+* AI assistant
+* Upload learning material
+* Generate quizzes
+* Take quizzes
+* Receive AI feedback
+* Track progress
+* Skill Garden
+* Skill DNA
+* Shields/Achievements
+* Certificates
+
+**Trainer**
+
+* Upload learning materials
+* Generate/review MCQs
+* Create assessments
+* View learner performance
+
+**Admin**
+
+* Workforce competency analytics
+* Department-wise skill gaps
+* Training effectiveness
+* Course/recommendation analytics
+* Emerging skill trends
+
+### 11. REQUIRED PAGES
+
+Create these routes/pages:
+
+`/login`
+`/dashboard`
+`/profile`
+`/assessment`
+`/competency`
+`/skill-gaps`
+`/learning-path`
+`/skill-garden`
+`/skill-dna`
+`/courses`
+`/course/:id`
+`/ai-assistant`
+`/materials`
+`/quiz-generator`
+`/quiz/:id`
+`/feedback`
+`/achievements`
+`/trainer`
+`/admin`
+`/analytics`
+
+Use a consistent sidebar/navbar and responsive layout.
+
+### 12. LOGIN
+
+Provide demo accounts:
+
+Learner:
+Email: [learner@mindmesh.ai](mailto:learner@mindmesh.ai)
+Password: demo123
+
+Trainer:
+Email: [trainer@mindmesh.ai](mailto:trainer@mindmesh.ai)
+Password: demo123
+
+Admin:
+Email: [admin@mindmesh.ai](mailto:admin@mindmesh.ai)
+Password: demo123
+
+Authentication can be mocked initially but structure the code for JWT integration.
+
+### 13. PROFILE
+
+Profile fields:
+
+* Name
+* Designation
+* Department
+* Job role
+* Assignment
+* Education
+* Years of experience
+* Previous training
+* Current competencies
+* Future career/role goal
+
+Use sample learner:
+**Priya Sharma — Statistical Officer**
+
+### 14. ASSESSMENT
+
+Build an interactive competency assessment.
+
+Include:
+
+* MCQs
+* Scenario-based questions
+* Skill/domain selection
+* Progress indicator
+* Timer
+* Submit
+* Results
+
+Calculate competency scores from responses.
+
+Example score categories:
+
+* Beginner
+* Developing
+* Proficient
+* Advanced
+* Expert
+
+### 15. AI ANALYSIS
+
+After assessment, show an AI analysis screen containing:
+
+**Overall Competency: 68%**
+
+Strong:
+
+* Survey Design
+* Data Visualization
+
+Needs Improvement:
+
+* Python
+* SQL
+* AI/ML
+
+Critical Gap:
+
+* Cloud Computing
+
+Also show:
+
+* Why the gap exists
+* Why the skill matters
+* Priority
+* Suggested learning action
+
+### 16. PERSONALIZED RECOMMENDATION ENGINE
+
+Recommendations must consider:
+
+* Current competency
+* Job role
+* Experience
+* Learning history
+* Department priorities
+* Future role
+* Emerging technologies
+
+Display recommendation cards with:
+
+* Course title
+* Provider
+* Skill
+* Current level
+* Target level
+* Duration
+* Priority
+* Reason for recommendation
+
+### 17. iGOT + NSSTA/TPAC
+
+Create a realistic **Integration Hub**.
+
+**iGOT Karmayogi**
+
+* Course catalogue
+* Recommended courses
+* Enrollment status
+* Completion status
+
+**NSSTA / TPAC**
+
+* Recommended Training Programmes
+* Programme dates
+* Mode
+* Duration
+* Relevance score
+
+Use realistic mock data and clearly indicate “Prototype Integration” if APIs are unavailable.
+
+### 18. COURSE PAGE
+
+Course page must contain:
+
+* Course overview
+* Learning objectives
+* Modules
+* Progress
+* Resources
+* Start/Continue button
+* AI assistant
+* Assessment
+
+Track time spent and completed lessons because these metrics feed the Skill Garden and Shield system.
+
+### 19. AI LEARNING ASSISTANT
+
+Add an AI assistant for learning support.
+
+Capabilities:
+
+* Explain concepts simply
+* Answer course questions
+* Give hints
+* Summarize content
+* Generate examples
+* Recommend what to study next
+
+### 20. UPLOAD → AI QUIZ GENERATOR
+
+Allow Trainer/Admin to upload:
+
+* PDF
+* DOCX
+* TXT
+* PPT/PPTX if supported
+
+Extract text and send it to the AI service.
+
+Generate MCQs containing:
+
+* Question
+* 4 options
+* Correct answer
+* Explanation
+* Difficulty
+* Topic
+* Skill/domain
+
+Allow trainer to:
+
+* Review
+* Edit
+* Delete
+* Approve questions
+
+Then publish the quiz.
+
+### 21. QUIZ EXPERIENCE
+
+Learner sees:
+
+* Question
+* Four options
+* Progress
+* Timer
+* Previous/Next
+* Submit
+
+After submission show:
+
+* Score
+* Correct/incorrect answers
+* Explanations
+* Skill-wise performance
+
+### 22. AI FEEDBACK
+
+Generate personalized feedback such as:
+
+“You performed strongly in Survey Design but need additional practice in Sampling. Complete the recommended Sampling module before attempting the advanced assessment.”
+
+Then automatically update:
+**Competency + Skill DNA + Skill Garden + Shield Progress**
+
+### 23. CONTINUOUS LEARNING
+
+After every assessment/quiz:
+
+**Update competency → recalculate gaps → grow garden → update Skill DNA → update shield progress → generate new recommendations**
+
+Example:
+Python: 42% → 58%
+
+Garden:
+Python plant grows from 35% → 55%
+
+Skill DNA:
+Python gene becomes stronger.
+
+Achievements:
+Progress toward next shield increases.
+
+### 24. DASHBOARD
+
+Learner dashboard should show:
+
+* Overall competency
+* Competency Twin
+* Skill gaps
+* Recommended courses
+* Current learning path
+* Quiz performance
+* Learning streak
+* **Mini Skill Garden**
+* **Mini Skill DNA**
+* **Current Shield**
+* Shield progress
+* Achievements
+* Certificates
+* Recent activity
+
+Make these three elements highly visible because they are core differentiators.
+
+### 25. ADMIN ANALYTICS
+
+Include:
+
+* Total learners
+* Average competency
+* Department comparison
+* Most common skill gaps
+* Training completion
+* Quiz performance
+* Skill improvement
+* Emerging skills
+* Learning hours
+* Garden growth
+* Shield distribution
+* Skill DNA diversity
+
+### 26. DATABASE
+
+Create appropriate entities/tables:
+
+User
+Role
+Department
+LearnerProfile
+Skill
+Competency
+Assessment
+Question
+Answer
+SkillGap
+Course
+Recommendation
+Enrollment
+LearningProgress
+LearningSession
+TrainingProgram
+LearningMaterial
+Quiz
+QuizQuestion
+QuizAttempt
+Feedback
+Achievement
+Shield
+Certificate
+SkillGarden
+GardenPlant
+SkillDNA
+SkillGene
+
+### 27. BACKEND APIs
+
+Create clean REST APIs for:
+
+`/api/auth`
+`/api/users`
+`/api/profile`
+`/api/skills`
+`/api/assessment`
+`/api/competency`
+`/api/skill-gaps`
+`/api/recommendations`
+`/api/igot`
+`/api/nssta`
+`/api/courses`
+`/api/materials`
+`/api/quiz`
+`/api/feedback`
+`/api/garden`
+`/api/skill-dna`
+`/api/achievements`
+`/api/dashboard`
+`/api/admin`
+`/api/ai`
+
+Separate controllers, services, repositories and DTOs.
+
+### 28. DEMO DATA
+
+Preload realistic data so the prototype works immediately.
+
+Create Priya Sharma's profile with:
+
+Survey Design 82
+Sampling 55
+National Accounts 70
+Python 42
+R 60
+SQL 48
+Data Visualization 78
+AI/ML 35
+Cloud Computing 30
+Cybersecurity 65
+Leadership 75
+Communication 80
+
+Use these scores to demonstrate personalized recommendations.
+
+Also preload:
+
+* Garden plants at different growth stages
+* Skill DNA with existing genes
+* Bronze/Silver/Gold shields
+* Learning history
+* Quiz history
+* Course progress
+
+### 29. SIH DEMO FLOW
+
+The complete 5-minute demonstration should be:
+
+1. Login as Statistical Officer
+2. Open dashboard
+3. Show **Competency Twin**
+4. Show **Skill DNA**
+5. Show **Skill Garden**
+6. Show current **Shield**
+7. Take assessment
+8. AI identifies skill gaps
+9. Show personalized learning pathway
+10. Show iGOT recommendations
+11. Show NSSTA/TPAC programmes
+12. Open recommended course
+13. Spend/record learning time
+14. Upload learning material
+15. AI generates MCQs
+16. Trainer reviews questions
+17. Learner takes quiz
+18. AI gives personalized feedback
+19. Competency score updates
+20. **Skill DNA evolves**
+21. **Skill Garden grows**
+22. **Shield progress increases/unlocks**
+23. New recommendation appears
+24. Show admin workforce analytics
+
+### 30. IMPORTANT PROTOTYPE RULES
+
+* The prototype must actually work end-to-end.
+* Do NOT create only static UI mockups.
+* Use mock data/services where external APIs are unavailable.
+* Keep architecture ready for real API integration.
+* Implement functional navigation, forms, assessment, scoring, quiz generation, learning-time tracking, garden growth, DNA updates, shield progression and dashboards.
+* Handle loading, empty and error states.
+* Make the app responsive.
+* Keep code modular and maintainable.
+* Never expose API keys in frontend code.
+* Use environment variables.
+* Include README with setup instructions.
+* Include `.env.example`.
+* Include database schema/seed data.
+* Ensure the project can run locally.
+
+### 31. PRIORITY
+
+**P0**
+Login, dashboard, profile, assessment, AI skill-gap analysis, Competency Twin, recommendations, iGOT/NSSTA mock integration, upload → AI quiz → quiz → feedback → competency update, Skill Garden, Skill DNA, Shield achievements.
+
+**P1**
+AI assistant, trainer dashboard, admin analytics, certificates.
+
+**P2**
+Advanced analytics, multilingual support, predictive future-skill analysis.
+
+Build P0 first and make the complete end-to-end demo functional before adding P1/P2.
+
+### FINAL PRODUCT POSITIONING
+
+Do NOT build a generic LMS.
+
+Build **MindMesh — an AI-driven competency intelligence, personalized capacity-building and gamified learning platform for India's Official Statistical System.**
+
+The three signature experiences must be immediately visible:
+
+**🌱 SKILL GARDEN**
+Your learning grows a living digital garden.
+
+**🧬 SKILL DNA**
+Your knowledge creates your unique evolving Skill DNA.
+
+**🛡️ SHIELD ACHIEVEMENTS**
+Your learning journey earns increasingly prestigious competitive-game-inspired shields.
+
+Core differentiator:
+
+**AI Competency Twin + Skill Gap Analysis + Personalized iGOT/NSSTA Recommendations + AI Quiz Generation + Continuous Competency Update + Skill Garden + Skill DNA + Shield Gamification.**
+
+Start by creating the project architecture and P0 features, then implement and test each module before moving to the next.

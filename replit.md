@@ -1,10 +1,11 @@
-# [Project name]
+# MindMesh
 
-_Replace the heading above with the project's name, and this line with one sentence describing what this app does for users._
+MindMesh is an AI-driven competency intelligence and gamified learning platform for India's official statistical workforce.
 
 ## Run & Operate
 
 - `pnpm --filter @workspace/api-server run dev` — run the API server (port 5000)
+- `pnpm --filter @workspace/mindmesh run dev` — run the MindMesh web app
 - `pnpm run typecheck` — full typecheck across all packages
 - `pnpm run build` — typecheck + build all packages
 - `pnpm --filter @workspace/api-spec run codegen` — regenerate API hooks and Zod schemas from the OpenAPI spec
@@ -22,23 +23,30 @@ _Replace the heading above with the project's name, and this line with one sente
 
 ## Where things live
 
-_Populate as you build — short repo map plus pointers to the source-of-truth file for DB schema, API contracts, theme files, etc._
+- `artifacts/mindmesh/src/` — React frontend, routes, shared shell, and theme
+- `artifacts/api-server/src/routes/mindmesh.ts` — mock REST API for the demo flows
+- `artifacts/api-server/src/lib/mindmesh-data.ts` — Priya Sharma demo data and progression state
+- `lib/api-spec/openapi.yaml` — source of truth for the generated API client and Zod schemas
 
 ## Architecture decisions
 
-_Populate as you build — non-obvious choices a reader couldn't infer from the code (3-5 bullets)._
+- The first demo uses a typed mock service rather than a database so the full SIH demo flow runs immediately and can later be swapped for persistent repositories.
+- OpenAPI remains the source of truth; the frontend consumes generated React Query hooks and the server validates responses with generated Zod schemas.
+- The visual language combines a dark botanical-teal workspace with warm paper surfaces and signal colors to connect learning growth with competency intelligence.
+- Learning time, quiz submissions, garden growth, and shield progress are kept in server-side in-memory state for the prototype session.
 
 ## Product
 
-_Describe the high-level user-facing capabilities of this app once they exist._
+MindMesh includes the learner dashboard, AI competency twin, assessment and gap analysis, personalized learning path, simulated iGOT and NSSTA recommendations, course detail and time tracking, AI assistant, material-to-quiz flow, quiz feedback, Skill Garden, Skill DNA, shield achievements, trainer workspace, and workforce analytics.
 
 ## User preferences
 
-_Populate as you build — explicit user instructions worth remembering across sessions._
+No additional preferences recorded.
 
 ## Gotchas
 
-_Populate as you build — sharp edges, "always run X before Y" rules._
+- Restart the API workflow after changing `artifacts/api-server/src` so the bundled server includes new mock routes.
+- If the OpenAPI contract changes, run codegen before checking the API server or frontend.
 
 ## Pointers
 

@@ -10,6 +10,8 @@ servers:
 tags:
   - name: health
     description: Health operations
+  - name: mindmesh
+    description: MindMesh competency intelligence and learning operations
 paths:
   /healthz:
     get:
@@ -24,6 +26,262 @@ paths:
             application/json:
               schema:
                 $ref: "#/components/schemas/HealthStatus"
+  /auth/login:
+    post:
+      operationId: login
+      tags: [mindmesh]
+      summary: Demo login
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/LoginInput"
+      responses:
+        "200":
+          description: Authenticated demo session
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/AuthSession"
+  /dashboard:
+    get:
+      operationId: getDashboard
+      tags: [mindmesh]
+      summary: Get learner dashboard
+      responses:
+        "200":
+          description: Dashboard summary
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Dashboard"
+  /profile:
+    get:
+      operationId: getProfile
+      tags: [mindmesh]
+      summary: Get learner profile
+      responses:
+        "200":
+          description: Learner profile
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Profile"
+  /competency:
+    get:
+      operationId: getCompetency
+      tags: [mindmesh]
+      summary: Get AI competency twin
+      responses:
+        "200":
+          description: Competency twin
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Competency"
+  /recommendations:
+    get:
+      operationId: getRecommendations
+      tags: [mindmesh]
+      summary: Get personalized recommendations
+      responses:
+        "200":
+          description: Recommendation list
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: "#/components/schemas/Recommendation"
+  /integrations:
+    get:
+      operationId: getIntegrations
+      tags: [mindmesh]
+      summary: Get simulated iGOT and NSSTA integrations
+      responses:
+        "200":
+          description: Integration hub
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/IntegrationHub"
+  /courses:
+    get:
+      operationId: getCourses
+      tags: [mindmesh]
+      summary: Get course catalogue
+      responses:
+        "200":
+          description: Course list
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: "#/components/schemas/Course"
+  /courses/{id}:
+    get:
+      operationId: getCourse
+      tags: [mindmesh]
+      summary: Get a course
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        "200":
+          description: Course detail
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/CourseDetail"
+  /garden:
+    get:
+      operationId: getGarden
+      tags: [mindmesh]
+      summary: Get skill garden
+      responses:
+        "200":
+          description: Skill garden state
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Garden"
+  /skill-dna:
+    get:
+      operationId: getSkillDna
+      tags: [mindmesh]
+      summary: Get skill DNA
+      responses:
+        "200":
+          description: Skill DNA state
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/SkillDna"
+  /achievements:
+    get:
+      operationId: getAchievements
+      tags: [mindmesh]
+      summary: Get shield achievements
+      responses:
+        "200":
+          description: Achievement progression
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Achievements"
+  /analytics:
+    get:
+      operationId: getAnalytics
+      tags: [mindmesh]
+      summary: Get workforce analytics
+      responses:
+        "200":
+          description: Workforce analytics
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Analytics"
+  /assessment/submit:
+    post:
+      operationId: submitAssessment
+      tags: [mindmesh]
+      summary: Submit competency assessment
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/AssessmentSubmission"
+      responses:
+        "200":
+          description: Assessment result and AI analysis
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/AssessmentResult"
+  /quiz/generate:
+    post:
+      operationId: generateQuiz
+      tags: [mindmesh]
+      summary: Generate a quiz from learning material
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/QuizGenerateInput"
+      responses:
+        "200":
+          description: Generated quiz
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Quiz"
+  /quiz/{id}:
+    get:
+      operationId: getQuiz
+      tags: [mindmesh]
+      summary: Get quiz
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        "200":
+          description: Quiz
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Quiz"
+  /quiz/{id}/submit:
+    post:
+      operationId: submitQuiz
+      tags: [mindmesh]
+      summary: Submit quiz answers
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: string
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/QuizSubmission"
+      responses:
+        "200":
+          description: Quiz score and feedback
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/QuizResult"
+  /learning/time:
+    post:
+      operationId: recordLearningTime
+      tags: [mindmesh]
+      summary: Record learning time
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/LearningTimeInput"
+      responses:
+        "200":
+          description: Updated progression
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ProgressUpdate"
 components:
   schemas:
     HealthStatus:
@@ -33,4 +291,357 @@ components:
           type: string
       required:
         - status
+    LoginInput:
+      type: object
+      required: [email, password]
+      properties:
+        email: { type: string, format: email }
+        password: { type: string }
+    AuthSession:
+      type: object
+      required: [token, user]
+      properties:
+        token: { type: string }
+        user: { $ref: "#/components/schemas/Profile" }
+    Profile:
+      type: object
+      required: [name, designation, department, role, assignment, education, experience, futureGoal, avatarInitials]
+      properties:
+        name: { type: string }
+        designation: { type: string }
+        department: { type: string }
+        role: { type: string }
+        assignment: { type: string }
+        education: { type: string }
+        experience: { type: integer }
+        futureGoal: { type: string }
+        avatarInitials: { type: string }
+    SkillScore:
+      type: object
+      required: [name, category, score, target, delta, level]
+      properties:
+        name: { type: string }
+        category: { type: string }
+        score: { type: integer }
+        target: { type: integer }
+        delta: { type: integer }
+        level: { type: string }
+    Competency:
+      type: object
+      required: [overall, level, domains, skills, strongSkills, gaps, criticalGap, insight]
+      properties:
+        overall: { type: integer }
+        level: { type: string }
+        domains:
+          type: array
+          items:
+            $ref: "#/components/schemas/DomainScore"
+        skills:
+          type: array
+          items:
+            $ref: "#/components/schemas/SkillScore"
+        strongSkills:
+          type: array
+          items: { type: string }
+        gaps:
+          type: array
+          items: { type: string }
+        criticalGap: { type: string }
+        insight: { type: string }
+    DomainScore:
+      type: object
+      required: [name, score, color]
+      properties:
+        name: { type: string }
+        score: { type: integer }
+        color: { type: string }
+    Recommendation:
+      type: object
+      required: [id, title, provider, skill, level, targetLevel, duration, priority, reason, kind]
+      properties:
+        id: { type: string }
+        title: { type: string }
+        provider: { type: string }
+        skill: { type: string }
+        level: { type: string }
+        targetLevel: { type: string }
+        duration: { type: string }
+        priority: { type: string }
+        reason: { type: string }
+        kind: { type: string }
+    Course:
+      type: object
+      required: [id, title, provider, skill, duration, progress, lessons, totalLessons, color, description]
+      properties:
+        id: { type: string }
+        title: { type: string }
+        provider: { type: string }
+        skill: { type: string }
+        duration: { type: string }
+        progress: { type: integer }
+        lessons: { type: integer }
+        totalLessons: { type: integer }
+        color: { type: string }
+        description: { type: string }
+    CourseDetail:
+      allOf:
+        - $ref: "#/components/schemas/Course"
+        - type: object
+          required: [objectives, modules]
+          properties:
+            objectives:
+              type: array
+              items: { type: string }
+            modules:
+              type: array
+              items:
+                $ref: "#/components/schemas/CourseModule"
+    CourseModule:
+      type: object
+      required: [title, duration, completed]
+      properties:
+        title: { type: string }
+        duration: { type: string }
+        completed: { type: boolean }
+    IntegrationHub:
+      type: object
+      required: [igot, nssta]
+      properties:
+        igot:
+          type: array
+          items:
+            $ref: "#/components/schemas/IntegrationCourse"
+        nssta:
+          type: array
+          items:
+            $ref: "#/components/schemas/TrainingProgram"
+    IntegrationCourse:
+      type: object
+      required: [title, status, provider, relevance]
+      properties:
+        title: { type: string }
+        status: { type: string }
+        provider: { type: string }
+        relevance: { type: integer }
+    TrainingProgram:
+      type: object
+      required: [title, dates, mode, duration, relevance]
+      properties:
+        title: { type: string }
+        dates: { type: string }
+        mode: { type: string }
+        duration: { type: string }
+        relevance: { type: integer }
+    Garden:
+      type: object
+      required: [growth, totalHours, plantsUnlocked, skillsCultivated, streak, recentlyGrown, plants]
+      properties:
+        growth: { type: integer }
+        totalHours: { type: number }
+        plantsUnlocked: { type: integer }
+        skillsCultivated: { type: integer }
+        streak: { type: integer }
+        recentlyGrown: { type: string }
+        plants:
+          type: array
+          items:
+            $ref: "#/components/schemas/GardenPlant"
+    GardenPlant:
+      type: object
+      required: [skill, type, growth, score, status, color, x, y]
+      properties:
+        skill: { type: string }
+        type: { type: string }
+        growth: { type: integer }
+        score: { type: integer }
+        status: { type: string }
+        color: { type: string }
+        x: { type: integer }
+        y: { type: integer }
+    SkillDna:
+      type: object
+      required: [diversityScore, strongestGene, fastestGrowing, recentlyAdded, genes]
+      properties:
+        diversityScore: { type: integer }
+        strongestGene: { type: string }
+        fastestGrowing: { type: string }
+        recentlyAdded: { type: string }
+        genes:
+          type: array
+          items:
+            $ref: "#/components/schemas/SkillGene"
+    SkillGene:
+      type: object
+      required: [skill, category, score, level, color]
+      properties:
+        skill: { type: string }
+        category: { type: string }
+        score: { type: integer }
+        level: { type: string }
+        color: { type: string }
+    Shield:
+      type: object
+      required: [name, tier, unlocked, progress, requirement]
+      properties:
+        name: { type: string }
+        tier: { type: string }
+        unlocked: { type: boolean }
+        progress: { type: integer }
+        requirement: { type: string }
+    Achievements:
+      type: object
+      required: [current, currentTier, next, nextProgress, shields]
+      properties:
+        current: { type: string }
+        currentTier: { type: string }
+        next: { type: string }
+        nextProgress: { type: integer }
+        shields:
+          type: array
+          items:
+            $ref: "#/components/schemas/Shield"
+    Dashboard:
+      type: object
+      required: [profile, competency, recommendations, garden, dna, achievements, courses, activity, learningHours, streak]
+      properties:
+        profile: { $ref: "#/components/schemas/Profile" }
+        competency: { $ref: "#/components/schemas/Competency" }
+        recommendations:
+          type: array
+          items: { $ref: "#/components/schemas/Recommendation" }
+        garden: { $ref: "#/components/schemas/Garden" }
+        dna: { $ref: "#/components/schemas/SkillDna" }
+        achievements: { $ref: "#/components/schemas/Achievements" }
+        courses:
+          type: array
+          items: { $ref: "#/components/schemas/Course" }
+        activity:
+          type: array
+          items: { $ref: "#/components/schemas/ActivityItem" }
+        learningHours: { type: number }
+        streak: { type: integer }
+    ActivityItem:
+      type: object
+      required: [title, subtitle, time, type]
+      properties:
+        title: { type: string }
+        subtitle: { type: string }
+        time: { type: string }
+        type: { type: string }
+    Analytics:
+      type: object
+      required: [totalLearners, averageCompetency, completionRate, learningHours, departments, gaps, trend]
+      properties:
+        totalLearners: { type: integer }
+        averageCompetency: { type: integer }
+        completionRate: { type: integer }
+        learningHours: { type: number }
+        departments:
+          type: array
+          items: { $ref: "#/components/schemas/DepartmentMetric" }
+        gaps:
+          type: array
+          items: { $ref: "#/components/schemas/GapMetric" }
+        trend:
+          type: array
+          items: { $ref: "#/components/schemas/TrendMetric" }
+    DepartmentMetric:
+      type: object
+      required: [name, score, learners]
+      properties:
+        name: { type: string }
+        score: { type: integer }
+        learners: { type: integer }
+    GapMetric:
+      type: object
+      required: [skill, percentage]
+      properties:
+        skill: { type: string }
+        percentage: { type: integer }
+    TrendMetric:
+      type: object
+      required: [month, score]
+      properties:
+        month: { type: string }
+        score: { type: integer }
+    AssessmentSubmission:
+      type: object
+      required: [answers]
+      properties:
+        answers:
+          type: array
+          items: { type: integer }
+    AssessmentResult:
+      type: object
+      required: [score, level, strong, improve, critical, message]
+      properties:
+        score: { type: integer }
+        level: { type: string }
+        strong:
+          type: array
+          items: { type: string }
+        improve:
+          type: array
+          items: { type: string }
+        critical: { type: string }
+        message: { type: string }
+    QuizGenerateInput:
+      type: object
+      required: [title, content]
+      properties:
+        title: { type: string }
+        content: { type: string }
+    Quiz:
+      type: object
+      required: [id, title, topic, questions, totalQuestions]
+      properties:
+        id: { type: string }
+        title: { type: string }
+        topic: { type: string }
+        totalQuestions: { type: integer }
+        questions:
+          type: array
+          items: { $ref: "#/components/schemas/QuizQuestion" }
+    QuizQuestion:
+      type: object
+      required: [id, question, options, answer, explanation, difficulty]
+      properties:
+        id: { type: integer }
+        question: { type: string }
+        options:
+          type: array
+          items: { type: string }
+        answer: { type: integer }
+        explanation: { type: string }
+        difficulty: { type: string }
+    QuizSubmission:
+      type: object
+      required: [answers]
+      properties:
+        answers:
+          type: array
+          items: { type: integer }
+    QuizResult:
+      type: object
+      required: [score, correct, total, feedback, skillUpdate]
+      properties:
+        score: { type: integer }
+        correct: { type: integer }
+        total: { type: integer }
+        feedback: { type: string }
+        skillUpdate: { type: string }
+    LearningTimeInput:
+      type: object
+      required: [courseId, minutes]
+      properties:
+        courseId: { type: string }
+        minutes: { type: integer }
+    ProgressUpdate:
+      type: object
+      required: [learningHours, gardenGrowth, shieldProgress, message]
+      properties:
+        learningHours: { type: number }
+        gardenGrowth: { type: integer }
+        shieldProgress: { type: integer }
+        message: { type: string }
 
